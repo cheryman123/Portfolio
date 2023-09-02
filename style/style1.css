@@ -29,9 +29,6 @@ time, mark, audio, video {
 
 body {
     line-height:1;
-}
-
-* {
     margin: 0;
     padding: 0;
 }
@@ -142,28 +139,56 @@ body {
 section.mars {
     width: 100%;
     position: absolute;
-    z-index: -1;
-    max-height: 100vh;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+div.mars {
+    min-height: 100vh;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: inherit;
+}
+
 div.greet{
+    flex: 0 0 auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
     padding-left: 64px;
     padding-right: 64px;
 
     @media only screen and (max-width: 1050px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
     padding-left: 16px;
     padding-right: 16px;
     }
 }
 
+div.martian {
+    flex: 1 0 auto;
+}
+
+div.marsphoto {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 64px;
+
+    @media only screen and (max-width: 1050px) {
+        padding-top: 16px;
+    }
+}
 img.mars {
-    display: block;
-    max-height: auto;
-    max-width: auto;
+    z-index: -1;
+    height: 175vh;
 }
 
 /* nav */
@@ -254,6 +279,7 @@ div.subarticle {
 /* header*/
 
 header.main {
+    
     padding: 64px;
     display: flex;
     flex-direction: column;
@@ -328,7 +354,7 @@ p.greet {
     text-decoration: none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -340,7 +366,7 @@ p.inf {
     text-decoration: none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 10px;
+        font-size: 11px;
     }
 }
 
@@ -352,7 +378,7 @@ ul.inline a {
     text-decoration:none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -366,7 +392,7 @@ p.article {
     text-decoration: none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -394,7 +420,7 @@ button.article {
     text-decoration: none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 14px;
+        font-size: 15px;
         padding: 8px;
         border-radius: 8px;
     }
