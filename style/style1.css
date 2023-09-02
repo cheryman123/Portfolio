@@ -382,6 +382,11 @@ ul.inline a {
     }
 }
 
+ul.inline a:hover {
+    transition: 300ms ease;
+    color: #3a3a3a;
+}
+
 /* text article*/
 
 p.article {
@@ -408,6 +413,8 @@ p.title {
     }
 }
 
+/*Button*/
+
 button.article {
     font-size: 20px;
     font-family: MetM, Arial, Helvetica, sans-serif;
@@ -416,6 +423,12 @@ button.article {
     padding: 16px;
     border-radius: 16px;
     width: fit-content;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
     
     text-decoration: none;
 
@@ -426,8 +439,107 @@ button.article {
     }
 }
 
-button:hover {
-    cursor: crosshair;
+button.article:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff8800, #ffff00, #b3ff00, #00ffff, #0000ff, #3f00ff, #7f00ff, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+button.article:active {
+    color: #3a3a3a;
+}
+
+button.article:active:after {
+    background: transparent;
+}
+
+button.article:hover:before {
+    opacity: 1;
+}
+
+button.article:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #3a3a3a;;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/*Text animation*/
+p.greet a {
+    color: #b3ff00;
+}
+
+p.greet a:hover{
+    transition: 400ms ease;
+    color: #E3E3E3;
+}
+
+a p.greet {
+    color: #E3E3E3;
+}
+
+a p.greet:hover {
+    transition: 400ms ease;
+    color: #b3ff00;
+}
+
+a p.inf {
+    color: #E3E3E3;
+}
+
+a p.inf:hover {
+    transition: 400ms ease;
+    color: #b3ff00;
+}
+
+/*Text animation*/
+p.greet a {
+    color: #b3ff00;
+}
+
+p.greet a:hover{
+    transition: 400ms ease;
+    color: #E3E3E3;
+}
+
+a p.greet {
+    color: #E3E3E3;
+}
+
+a p.greet:hover {
+    transition: 400ms ease;
+    color: #b3ff00;
+}
+
+a p.inf {
+    color: #E3E3E3;
+}
+
+a p.inf:hover {
+    transition: 400ms ease;
+    color: #b3ff00;
 }
 
 /*overlay*/
