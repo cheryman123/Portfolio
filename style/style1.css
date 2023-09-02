@@ -342,7 +342,7 @@ h1.greet {
     text-decoration: none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 25px;
+        font-size: 30px;
     }
 }
 
@@ -404,7 +404,7 @@ p.title {
     text-decoration: none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 25px;
+        font-size: 30px;
     }
 }
 
