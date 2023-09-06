@@ -220,7 +220,7 @@ li.inline {
 }
 
 section.main {
-    background-color: white;
+    background:white;
     padding: 64px;
     display: flex;
     flex-direction: column;
@@ -243,10 +243,12 @@ section.main div.subarticle {
 
 img.resize {
     width: 100%;
+    min-height: 100%;
 }
 
 video.resize {
     width: 100%;
+    min-height: 100%;
 }
 
 div.split{
@@ -262,9 +264,21 @@ div.article {
     border-radius: 16px;
     overflow: hidden;
     max-width: 100%;
+    transition: opacity ease 400ms, box-shadow ease 400ms;
+
+    box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.36);
 
     @media only screen and (max-width: 1050px) {
         flex-direction: column;
+        box-shadow: 2px 4px 4px hsl(0deg 0% 0% / 0.44);
+    }
+}
+
+div.article:hover {
+    box-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.25);
+
+    @media only screen and (max-width: 1050px) {
+        box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.36);
     }
 }
 
@@ -376,6 +390,7 @@ ul.inline a {
     color: #96705c;
     text-transform: uppercase;
     text-decoration:none;
+    transition: 400ms ease 0s;
 
     @media only screen and (max-width: 1050px) {
         font-size: 15px;
@@ -383,7 +398,7 @@ ul.inline a {
 }
 
 ul.inline a:hover {
-    transition: 300ms ease;
+    transition: 400ms ease 0s;
     color: #3a3a3a;
 }
 
@@ -452,8 +467,8 @@ button.article:before {
     height: calc(100% + 4px);
     animation: glowing 20s linear infinite;
     opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+    transition: opacity 400ms ease 0s;
+    border-radius: 4px;
 }
 
 button.article:active {
@@ -477,7 +492,7 @@ button.article:after {
     background: #3a3a3a;;
     left: 0;
     top: 0;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 @keyframes glowing {
@@ -488,57 +503,63 @@ button.article:after {
 
 /*Text animation*/
 p.greet a {
+    transition: 400ms ease 0s;
     color: #b3ff00;
 }
 
 p.greet a:hover{
-    transition: 400ms ease;
+    transition: 400ms ease 0s;
     color: #E3E3E3;
 }
 
 a p.greet {
+    transition: 400ms ease 0s;
     color: #E3E3E3;
 }
 
 a p.greet:hover {
-    transition: 400ms ease;
+    transition: 400ms ease 0s;
     color: #b3ff00;
 }
 
 a p.inf {
+    transition: 400ms ease 0s;
     color: #E3E3E3;
 }
 
 a p.inf:hover {
-    transition: 400ms ease;
+    transition: 400ms ease 0s;
     color: #b3ff00;
 }
 
 /*Text animation*/
 p.greet a {
+    transition: 400ms ease 0s;
     color: #b3ff00;
 }
 
 p.greet a:hover{
-    transition: 400ms ease;
+    transition: 400ms ease 0s;
     color: #E3E3E3;
 }
 
 a p.greet {
+    transition: 400ms ease 0s;
     color: #E3E3E3;
 }
 
 a p.greet:hover {
-    transition: 400ms ease;
+    transition: 400ms ease 0s;
     color: #b3ff00;
 }
 
 a p.inf {
+    transition: 400ms ease 0s;
     color: #E3E3E3;
 }
 
 a p.inf:hover {
-    transition: 400ms ease;
+    transition: 400ms ease 0s;
     color: #b3ff00;
 }
 
@@ -550,7 +571,7 @@ a p.inf:hover {
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.5); /* Black see-through */ 
     width: -webkit-fill-available;
-    transition: .25s ease;
+    transition: 400ms ease 0s;
     opacity:0;
     padding: 16px;
     text-align: center;
