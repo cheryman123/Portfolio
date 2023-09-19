@@ -220,7 +220,7 @@ li.inline {
 }
 
 section.main {
-    background:white;
+    background:#f9eae2;
     padding: 64px;
     display: flex;
     flex-direction: column;
@@ -264,22 +264,25 @@ div.article {
     border-radius: 16px;
     overflow: hidden;
     max-width: 100%;
-    transition: opacity ease 400ms, box-shadow ease 400ms;
+    transition: 400ms ease 0s;
+    /*transition: opacity ease 400ms, box-shadow ease 400ms;
 
     box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.36);
 
     @media only screen and (max-width: 1050px) {
         flex-direction: column;
         box-shadow: 2px 4px 4px hsl(0deg 0% 0% / 0.44);
-    }
+    }*/
 }
 
-div.article:hover {
-    box-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.25);
+div.article:hover{
+    background-color: white;
+    transition: 400ms ease 0s;
+    /*box-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.25);
 
     @media only screen and (max-width: 1050px) {
         box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.36);
-    }
+    }*/
 }
 
 div.subarticle {
@@ -334,6 +337,10 @@ footer.footer {
 @font-face {
     font-family: Oppen;
     src: url(../text/CooperHewitt-Medium.otf);
+}
+@font-face {
+    font-family: MetL;
+    src: url(../text/Metropolis-Light.otf);
 }
 @font-face {
     font-family: MetM;
@@ -400,14 +407,16 @@ ul.inline a {
 ul.inline a:hover {
     transition: 400ms ease 0s;
     color: #3a3a3a;
+    text-decoration: underline;
 }
 
 /* text article*/
 
 p.article {
     font-size: 20px;
-    font-family: MetM, Arial, Helvetica, sans-serif;
+    font-family: MetL, Arial, Helvetica, sans-serif;
     color: #3a3a3a;
+    line-height: 1.3em;
     
     text-decoration: none;
 
