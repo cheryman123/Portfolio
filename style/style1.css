@@ -265,14 +265,14 @@ div.article {
     overflow: hidden;
     max-width: 100%;
     transition: 400ms ease 0s;
-    /*transition: opacity ease 400ms, box-shadow ease 400ms;
+    /*transition: opacity ease 400ms, box-shadow ease 400ms;*/
 
-    box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.36);
+    /*box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.36);*/
 
     @media only screen and (max-width: 1050px) {
         flex-direction: column;
-        box-shadow: 2px 4px 4px hsl(0deg 0% 0% / 0.44);
-    }*/
+        /*box-shadow: 2px 4px 4px hsl(0deg 0% 0% / 0.44);*/
+    }
 }
 
 div.article:hover{
