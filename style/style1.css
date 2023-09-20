@@ -146,13 +146,17 @@ section.mars {
 }
 
 div.mars {
-    min-height: 100dvh;
+    min-height: calc(100dvh - 64px);
     overflow: auto;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: inherit;
+
+    @media only screen and (max-width: 1050px) {
+        min-height: calc(100dvh - 32px);
+    }
 }
 
 div.greet{
@@ -194,7 +198,7 @@ img.mars {
 /* nav */
 
 nav.menu {
-    background-color: #f9eae2;
+    background-color: #f9e0de;
     padding: 16px;
     @media only screen and (max-width: 1050px) {
         padding: 0px;
@@ -220,16 +224,19 @@ li.inline {
 }
 
 section.main {
-    background:#f9eae2;
-    padding: 64px;
+    background:#f9e0de;
+    padding-top: 32px;
+    padding-right: 64px;
+    padding-left: 64px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    row-gap: 64px;
+    row-gap: 32px;
 
     @media only screen and (max-width: 1050px) {
-        padding: 16px;
-        row-gap: 16px;
+        padding-top: 16px;
+        padding-right: 32px;
+        padding-left: 32px;
     }
 }
 
@@ -260,7 +267,7 @@ div.split{
 div.article {
     display: flex;
     flex-direction: row;
-    background-color: #f9eae2;
+    background-color: #f9e0de;
     border-radius: 16px;
     overflow: hidden;
     max-width: 100%;
@@ -301,10 +308,10 @@ header.main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    row-gap: 64px;
+    row-gap: 32px;
 
     @media only screen and (max-width: 1050px) {
-        padding: 16px;
+        padding: 32px;
         row-gap: 16px;
     }
 }
@@ -319,10 +326,11 @@ img.header {
 /* footer */
 
 footer.footer {
+    background-color: #061f4a;
     display: flex;
     flex-direction: column;
     padding: 64px;
-    row-gap: 64px;
+    row-gap: 32px;
 
     @media only screen and (max-width: 1050px) {
         display: flex;
@@ -359,6 +367,7 @@ h1.greet {
     font-size: 40px;
     font-family: MetR, Arial, Helvetica, sans-serif;
     color: #E3E3E3;
+    line-height: 1.3em;
     
     text-decoration: none;
 
@@ -394,7 +403,7 @@ p.inf {
 ul.inline a {
     font-size: 20px;
     font-family: Oppen ,Arial, Helvetica, sans-serif;
-    color: #96705c;
+    color: #212121;
     text-transform: uppercase;
     text-decoration:none;
     transition: 400ms ease 0s;
@@ -406,7 +415,7 @@ ul.inline a {
 
 ul.inline a:hover {
     transition: 400ms ease 0s;
-    color: #3a3a3a;
+    color: #212121;
     text-decoration: underline;
 }
 
@@ -415,7 +424,7 @@ ul.inline a:hover {
 p.article {
     font-size: 20px;
     font-family: MetL, Arial, Helvetica, sans-serif;
-    color: #3a3a3a;
+    color: #212121;
     line-height: 1.3em;
     
     text-decoration: none;
@@ -428,7 +437,7 @@ p.article {
 p.title {
     font-size: 40px;
     font-family: MetR, Arial, Helvetica, sans-serif;
-    color: #3a3a3a;
+    color: #212121;
     
     text-decoration: none;
 
@@ -442,8 +451,8 @@ p.title {
 button.article {
     font-size: 20px;
     font-family: MetM, Arial, Helvetica, sans-serif;
-    color: #f9eae2;
-    background-color: #3a3a3a;
+    color: #f9e0de;
+    background-color: #212121;
     padding: 16px;
     border-radius: 16px;
     width: fit-content;
@@ -481,7 +490,7 @@ button.article:before {
 }
 
 button.article:active {
-    color: #3a3a3a;
+    color: #212121;
 }
 
 button.article:active:after {
@@ -498,7 +507,7 @@ button.article:after {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #3a3a3a;;
+    background: #212121;;
     left: 0;
     top: 0;
     border-radius: 8px;
