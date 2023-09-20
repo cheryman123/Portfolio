@@ -146,7 +146,7 @@ section.mars {
 }
 
 div.mars {
-    min-height: calc(100dvh - 64px);
+    min-height: calc(100dvh - 126px);
     overflow: auto;
 
     display: flex;
@@ -155,7 +155,7 @@ div.mars {
     box-sizing: inherit;
 
     @media only screen and (max-width: 1050px) {
-        min-height: calc(100dvh - 32px);
+        min-height: calc(100dvh - 64px);
     }
 }
 
@@ -225,7 +225,7 @@ li.inline {
 
 section.main {
     background:#f9e0de;
-    padding-top: 32px;
+    padding-top: 16px;
     padding-right: 64px;
     padding-left: 64px;
     display: flex;
@@ -234,7 +234,7 @@ section.main {
     row-gap: 32px;
 
     @media only screen and (max-width: 1050px) {
-        padding-top: 16px;
+        padding-top: 8px;
         padding-right: 32px;
         padding-left: 32px;
     }
