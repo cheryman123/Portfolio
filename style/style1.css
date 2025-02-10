@@ -66,7 +66,7 @@ div.postarea{
 
 textarea {
     line-height: 1.2;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 /* scrollbar */
@@ -366,7 +366,7 @@ footer.footer {
 }
 
 h1.greet {
-    font-size: 40px;
+    font-size: 30px;
     font-family: MetR, Arial, Helvetica, sans-serif;
     color: #E3E3E3;
     line-height: 1.3em;
@@ -379,31 +379,31 @@ h1.greet {
 }
 
 p.greet {
-    font-size: 20px;
+    font-size: 16px;
     font-family: MetM, Arial, Helvetica, sans-serif;
     color: #E3E3E3;
     
     text-decoration: none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
 p.inf {
-    font-size: 20px;
+    font-size: 16px;
     font-family: MetM, Arial, Helvetica, sans-serif;
     color: #E3E3E3;
     
     text-decoration: none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
 ul.inline a {
-    font-size: 20px;
+    font-size: 16px;
     font-family: Oppen ,Arial, Helvetica, sans-serif;
     color: #212121;
     text-transform: uppercase;
@@ -411,7 +411,7 @@ ul.inline a {
     transition: 400ms ease 0s;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
@@ -424,7 +424,7 @@ ul.inline a:hover {
 /* text article*/
 
 p.article {
-    font-size: 20px;
+    font-size: 16px;
     font-family: MetL, Arial, Helvetica, sans-serif;
     color: #212121;
     line-height: 1.3em;
@@ -432,12 +432,12 @@ p.article {
     text-decoration: none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
 p.title {
-    font-size: 40px;
+    font-size: 30px;
     font-family: MetR, Arial, Helvetica, sans-serif;
     color: #212121;
     
@@ -451,7 +451,7 @@ p.title {
 /*Button*/
 
 button.article {
-    font-size: 20px;
+    font-size: 16px;
     font-family: MetM, Arial, Helvetica, sans-serif;
     color: #f9e0de;
     background-color: #212121;
@@ -468,7 +468,7 @@ button.article {
     text-decoration: none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 15px;
+        font-size: 16px;
         padding: 8px;
         border-radius: 8px;
     }
