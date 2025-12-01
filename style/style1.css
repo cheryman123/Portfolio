@@ -147,7 +147,6 @@ section.mars {
 
 div.mars {
     min-height: calc(100dvh - 126px);
-    overflow: auto;
 
     display: flex;
     flex-direction: column;
@@ -215,7 +214,7 @@ ul.inline {
 
 li.inline {
     display: inline;
-    padding-left: 16px;
+    padding: 16px;
     @media only screen and (max-width: 1050px) {
         display:list-item;
         padding-top: 8px;
@@ -225,8 +224,8 @@ li.inline {
 
 section.main {
     background:#f9e0de;
-    padding-top: 16px;
-    padding-bottom: 32px;
+    padding-top: 48px;
+    padding-bottom: 64px;
     padding-right: 64px;
     padding-left: 64px;
     display: flex;
@@ -235,14 +234,41 @@ section.main {
     row-gap: 32px;
 
     @media only screen and (max-width: 1050px) {
-        padding-top: 8px;
+        padding-top: 24px;
         padding-right: 32px;
         padding-left: 32px;
         padding-bottom: 16px;
+        row-gap: 16px;
     }
 }
 
 section.main div.subarticle {
+    width: 100%;
+
+    @media only screen and (max-width: 1050px) {
+        width: auto;
+    }    
+}
+
+section.mainecoagro {
+    background:#f9e0de;
+    padding-top: 32px;
+    padding-bottom: 48px;
+    padding-right: 48px;
+    padding-left: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 1050px) {
+        padding-top: 16px;
+        padding-right: 16px;
+        padding-left: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+section.mainecoagro div.subarticle {
     width: 100%;
 
     @media only screen and (max-width: 1050px) {
@@ -294,12 +320,36 @@ div.article:hover{
     }*/
 }
 
+div.article_ecoagro {
+    display: flex;
+    flex-direction: row;
+    background-color:#7e9f2e;
+    overflow: hidden;
+    max-width: 100%;
+    transition: 400ms ease 0s;
+    /*transition: opacity ease 400ms, box-shadow ease 400ms;*/
+
+    /*box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.36);*/
+
+    @media only screen and (max-width: 1050px) {
+        flex-direction: column;
+        /*box-shadow: 2px 4px 4px hsl(0deg 0% 0% / 0.44);*/
+    }
+}
+
 div.subarticle {
     width: 100%;
     padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+div.subarticleecoagro {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
 }
 
 /* header*/
@@ -366,7 +416,7 @@ footer.footer {
 }
 
 h1.greet {
-    font-size: 30px;
+    font-size: 32px;
     font-family: MetR, Arial, Helvetica, sans-serif;
     color: #E3E3E3;
     line-height: 1.3em;
@@ -374,7 +424,7 @@ h1.greet {
     text-decoration: none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 30px;
+        font-size: 32px;
     }
 }
 
@@ -421,6 +471,34 @@ ul.inline a:hover {
     text-decoration: underline;
 }
 
+/* article info buttons */
+div.article_button {
+    display: flex;
+    flex-direction: column;
+    color:#212121;
+    background-color:#f9e0de;
+    padding: 16px;
+    gap: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 100%;
+    transition: 400ms ease 0s;
+    /*transition: opacity ease 400ms, box-shadow ease 400ms;*/
+
+    /*box-shadow: 4px 8px 8px hsl(0deg 0% 0% / 0.36);*/
+
+    @media only screen and (max-width: 1050px) {
+        font-size: 16px;
+        padding: 8px;
+        border-radius: 8px;
+        gap: 8px;
+    }
+}
+
+div.article_button p {
+    color: #212121;
+}
+
 /* text article*/
 
 p.article {
@@ -437,14 +515,14 @@ p.article {
 }
 
 p.title {
-    font-size: 30px;
+    font-size: 32px;
     font-family: MetR, Arial, Helvetica, sans-serif;
     color: #212121;
     
     text-decoration: none;
 
     @media only screen and (max-width: 1050px) {
-        font-size: 30px;
+        font-size: 32px;
     }
 }
 
@@ -523,6 +601,11 @@ button.article:after {
 
 /*Text animation*/
 p.greet a {
+    transition: 400ms ease 0s;
+    color: #b3ff00;
+}
+
+h1.greet a {
     transition: 400ms ease 0s;
     color: #b3ff00;
 }
